@@ -20,14 +20,4 @@ async function run1() {
   await a();
 }
 
-async function run2() {
-  await 0;
-  try {
-    await a();
-  } catch (e) {
-    console.error(e);
-  }
-}
-
 run1().catch((e) => console.error(e.stack));
-run2();
